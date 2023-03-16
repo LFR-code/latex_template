@@ -1,0 +1,31 @@
+# (APPENDIX) Appendix {-}
+<!-- Do not delete/edit the line above -->
+# Appendix A
+
+## Subsection
+
+Insert text here.
+
+# Appendix B
+
+Insert text here
+
+## Subsection
+
+### Smaller subsection
+
+Insert text
+
+You can also include figures in the appendix (Figure \ref{fig:wcviTowsFig}).
+
+\clearpage
+
+## Figures
+
+```{r figure names}
+wcviTowsFig <-  "Number of SMMS tows in WCVI PFMAs from 1975-2021"
+```
+
+```{r wcviTowsFig, fig.cap=wcviTowsFig, echo = FALSE, message=FALSE, fig.align = "center", out.width = "100%"}
+knitr::include_graphics("figure/wcviTowsByPFMA.pdf")
+```

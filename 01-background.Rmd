@@ -1,0 +1,14 @@
+# BACKGROUND
+
+Insert text here.
+
+## Subsection
+
+Insert text here.
+
+# CONSERVATION OBJECTIVES
+
+The primary management objective for BC Eulachon aims to promote stock rebuilding to a level consistent with a COSEWIC categorization of ‘special concern’ [@Schweigert_2012; @dfo2023_eulIFMP]. This objective is interpreted as achieving positive growth in Eulachon spawning biomass in the short-term, and achieving historical levels of biomass over the long-term.
+
+Formal conservation objectives for FR Eulachon that are consistent with the SFF and FSP policies [@dfo_2009a; @dfo_2022b] have not been defined, but at a minimum they require a choice of i) a limit reference point, ii) the removal reference (RR) rate (i.e., the maximum acceptable harvest rate), with desired probabilities for biomass being above the LRP and harvest rates below the RR over a specific timeframe.
+

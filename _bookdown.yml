@@ -1,0 +1,12 @@
+book_filename: "resdoc"
+rmd_files: ["index.Rmd",
+            "01-background.Rmd",
+            "02-om.Rmd",
+            "03-mp.Rmd",
+            "04-discussion.Rmd",
+            # "05-acknowledgements.Rmd",
+            "06-references.Rmd",
+            "07-tables.Rmd",
+            "08-figures.Rmd",
+            "09-appendix.Rmd"]
+delete_merged_file: false

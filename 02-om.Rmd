@@ -1,0 +1,12 @@
+# OPERATING MODEL
+
+Insert text here.
+
+## Subsection
+
+### Smaller subsection
+Reference tables like this: Model notation is given in Table \ref{tab:SISCALnotation} and 
+population dynamics and statistical model equations in Tables 
+\ref{tab:procObsModelEqns} and \ref{tab:statModelEqns}, respectively.
+
+Reference figures like this: Figure \ref{fig:rnorm} and Figure \ref{fig:likProfM}.

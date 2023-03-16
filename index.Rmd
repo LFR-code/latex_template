@@ -1,0 +1,99 @@
+---
+title: |
+  A pragmatic approach for managing Fraser River Eulachon (*Thaleichthys pacificus*) fisheries: rapid prototyping operating model development and management procedure evaluation
+recipient: |
+  Someone1, 
+  Someone2
+author: |
+  Beau Doherty,
+  Samuel D N Johnson,
+  Ashleen Benson, and
+  Sean P Cox (author list and order TBD)
+address: |
+  Landmark Fisheries Research\
+     211 - 2414 St Johns Street\
+     Port Moody, British Columbia, V3H 2B1, Canada\
+email: |
+  Email: info@landmarkfisheries.com
+month: "Month"
+year: 2022
+report_number: nnn
+abstract: |
+  Insert abstract text here.
+date: \today
+# link-citations: true
+bibliography: bib/refs.bib
+natbib: true
+geometry: letterpaper
+toc: false
+fontsize: 12pt
+lineno: true #line number
+csl-refs: true
+numbersections: true
+noindent: true #if true: all paragraph will have no indentation, otherwise there will be indentation on 2nd paragraph
+
+header: "Draft working paper --- Do not cite or circulate" # or "" to omit
+output:
+ bookdown::pdf_document2:
+   keep_text: true
+   fig_caption: true
+   latex_engine: pdflatex
+   template: templates/lfrDraft.latex #choose the template
+# ------------
+# End of options to set
+# Any extra LaTeX code for the header:
+# header-includes:
+# - \usepackage{tikz}
+---
+
+```{r setup, echo=FALSE, cache=FALSE, message=FALSE, results='hide', warning=FALSE}
+library(knitr)
+if (is_latex_output()) {
+  knitr_figs_dir <- "knitr-figs-pdf/"
+  knitr_cache_dir <- "knitr-cache-pdf/"
+  fig_out_type <- "png"
+  kable_format <- "latex"
+} else {
+  knitr_figs_dir <- "knitr-figs-docx/"
+  knitr_cache_dir <- "knitr-cache-docx/"
+  fig_out_type <- "png"
+  kable_format <- "latex"
+}
+fig_asp <- 0.618
+fig_width <- 9
+fig_out_width <- "6in"
+fig_dpi <- 180
+fig_align <- "center"
+fig_pos <- "htb"
+opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  comment = "#>",
+  fig.path = knitr_figs_dir,
+  cache.path = knitr_cache_dir,
+  fig.asp = fig_asp,
+  fig.width = fig_width,
+  out.width = fig_out_width,
+  echo = FALSE,
+  #  autodep = TRUE,
+  #  cache = TRUE,
+  cache.comments = FALSE,
+  dev = fig_out_type,
+  dpi = fig_dpi,
+  fig.align = fig_align,
+  fig.pos = fig_pos
+)
+```
+
+```{r load-libraries, echo = FALSE, cache = FALSE, message = FALSE, results = 'hide', warning = FALSE}
+# add other packages here:
+library(dplyr)
+library(readr)
+library(tibble)
+library(kableExtra)
+library(scales)
+library(RColorBrewer)
+library(csasdown)
+
+```
