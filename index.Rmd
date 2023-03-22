@@ -38,7 +38,7 @@ output:
    keep_text: true
    fig_caption: true
    latex_engine: pdflatex
-   template: templates/lfrDraft.latex #choose the template
+   template: templates/basic.latex #choose the template
 # ------------
 # End of options to set
 # Any extra LaTeX code for the header:

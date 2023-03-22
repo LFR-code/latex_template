@@ -38,7 +38,7 @@ output:
    keep_text: true
    fig_caption: true
    latex_engine: pdflatex
-   template: templates/lfrDraft.latex #choose the template
+   template: templates/basic.latex #choose the template
 # ------------
 # End of options to set
 # Any extra LaTeX code for the header:
@@ -333,12 +333,40 @@ knitr::include_graphics("figure/LikeProfileM.pdf")
 <!--chapter:end:08-figures.Rmd-->
 
 # (APPENDIX) Appendix {-}
-<!-- Do not delete/edit the line above -->
+<!-- \renewcommand\thefigure{\thesection.\arabic{figure}} -->
+<!-- \setcounter{figure}{0} -->
+<!-- \renewcommand\thetable{\thesection.\arabic{table}} -->
+<!-- \setcounter{table}{0} -->
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+<!-- Do not delete/edit the lines above -->
 # Appendix A
 
 ## Subsection
 
 Insert text here.
+```{r figure names1}
+wcviTowsFig <-  "Number of SMMS tows in WCVI PFMAs from 1975-2021"
+```
+
+```{r wcviTowsFig1, fig.cap=wcviTowsFig, echo = FALSE, message=FALSE, fig.align = "center", out.width = "100%"}
+knitr::include_graphics("figure/wcviTowsByPFMA.pdf")
+```
+
+\clearpage
+
+```{r table}
+kable(head(iris),
+      format = kable_format,
+      escape = FALSE,
+      booktabs = TRUE,
+      caption = "Iris data",
+      align = c("c","l")) %>% 
+  kable_styling(latex_options = c("hold_position","scale_down"),
+                bootstrap_options = c("striped", "hover"),
+                font_size = 10)
+
+```
 
 # Appendix B
 
