@@ -1,3 +1,8 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
 ```{r capsAndEquations, include = FALSE}
 
 procObsModelEqs <- read.csv("data/procModelEqns_EUL_hRicker.csv")

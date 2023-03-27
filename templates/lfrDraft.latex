@@ -29,6 +29,8 @@
 \usepackage{pdflscape}
 \usepackage{fancyhdr}
 \usepackage[dvipsnames,table]{xcolor}
+\usepackage[titletoc, title]{appendix}
+
 \newcommand{\blandscape}{\begin{landscape}}
 \newcommand{\elandscape}{\end{landscape}}
 

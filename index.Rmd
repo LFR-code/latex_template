@@ -25,7 +25,7 @@ date: \today
 bibliography: bib/refs.bib
 natbib: true
 geometry: letterpaper
-toc: false
+toc: true
 fontsize: 12pt
 lineno: true #line number
 csl-refs: true
@@ -34,11 +34,14 @@ noindent: true #if true: all paragraph will have no indentation, otherwise there
 
 header: "Draft working paper --- Do not cite or circulate" # or "" to omit
 output:
- bookdown::pdf_document2:
-   keep_text: true
-   fig_caption: true
-   latex_engine: pdflatex
-   template: templates/basic.latex #choose the template
+  bookdown::pdf_document2:
+    keep_text: true
+    fig_caption: true
+    latex_engine: pdflatex
+    template: templates/lfrDraft.latex #choose the template
+  bookdown::word_document2:
+    reference_docx: templates/template.docx
+appendix: false
 # ------------
 # End of options to set
 # Any extra LaTeX code for the header:

@@ -22,6 +22,7 @@
 \usepackage{makecell}
 \usepackage{caption}
 \usepackage{bbold}
+\usepackage[titletoc, title]{appendix}
 
 \newcommand{\blandscape}{\begin{landscape}}
 \newcommand{\elandscape}{\end{landscape}}
@@ -35,26 +36,6 @@ $if(nocaption)$
 \usepackage[font=small,labelsep=none]{caption}
 $endif$
 
-% \newcommand{\appsection}{\@startsection
-% {section}{1}{0mm}                 %% name, level, indent
-% {-3.5ex \@plus -1ex \@minus -.2ex}%% beforeskip
-% {2.3ex \@plus.2ex}                %% afterskip
-% {\normalfont\large\bfseries\MakeUppercase}} %% style
-% 
-% \newcommand\Appendices{
-  %% Start appendices. Sets up numbering for appendix sections
-  %%  and their contents (tables, figures) to look like:
-  %%  A.1, A.2, A.1.2
-  % \appendix
-  %% Always start a new page for appendices
-  % \newpage
-  % \renewcommand{\thesection}{\thesection.\arabic{section}}
-  % \renewcommand{\thesubsection}{\thesection.\arabic{section}.\arabic{subsection}}
-  % \renewcommand{\thesubsubsection}{\thesection.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
-  % \renewcommand{\thetable}{\thesection.\arabic{table}}
-  % \renewcommand{\thefigure}{\thesection.\arabic{figure}}
-  % \renewcommand{\theequation}{\thesection.\arabic{equation}}
-% }
 
 $if(lineno)$
 \usepackage[left]{lineno}
@@ -251,10 +232,11 @@ $if(t_and_f)$
 $endif$
 
 $if(appendix)$
-\appendix
-\renewcommand\thefigure{\thesection.\arabic{figure}}
-\setcounter{figure}{0}
+\begin{appendices}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
 \input{appendix.tex}
+\end{appendices}
 $endif$
 
 $if(supplemental)$

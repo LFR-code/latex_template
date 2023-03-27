@@ -1,13 +1,17 @@
-# (APPENDIX) Appendix {-}
+```{=latex}
+% Do not delete this
+\begin{appendices}
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
-<!-- Do not delete/edit the lines above -->
-# Appendix A
+```
+<!-- Do not delete/edit the chunk above -->
+
+# Cool Appendix
 
 ## Subsection
 
 Insert text here.
-```{r figure names1}
+```{r figure names1, echo = FALSE}
 wcviTowsFig <-  "Number of SMMS tows in WCVI PFMAs from 1975-2021"
 ```
 
@@ -17,7 +21,7 @@ knitr::include_graphics("figure/wcviTowsByPFMA.pdf")
 
 \clearpage
 
-```{r table}
+```{r table, echo = FALSE}
 kable(head(iris),
       format = kable_format,
       escape = FALSE,
@@ -46,10 +50,17 @@ You can also include figures in the appendix (Figure \ref{fig:wcviTowsFig}).
 
 ## Figures
 
-```{r figure names}
+```{r figure names, echo = FALSE}
 wcviTowsFig <-  "Number of SMMS tows in WCVI PFMAs from 1975-2021"
 ```
 
 ```{r wcviTowsFig, fig.cap=wcviTowsFig, echo = FALSE, message=FALSE, fig.align = "center", out.width = "100%"}
 knitr::include_graphics("figure/wcviTowsByPFMA.pdf")
+```
+
+
+<!-- Do not delete/edit the chunk below -->
+```{=latex}
+% Do not delete this
+\end{appendices}
 ```

@@ -1,0 +1,9 @@
+book_filename: "main_text"
+rmd_files: ["index.Rmd",
+            "01-background.Rmd",
+            "02-om.Rmd",
+            "03-mp.Rmd",
+            "04-discussion.Rmd",
+            # "05-acknowledgements.Rmd",
+            "06-references.Rmd"]
+delete_merged_file: false

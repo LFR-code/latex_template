@@ -1,0 +1,6 @@
+book_filename: "extra"
+rmd_files: ["index.Rmd",
+            "07-tables.Rmd",
+            "08-figures.Rmd",
+            "09-appendix.Rmd"]
+delete_merged_file: false

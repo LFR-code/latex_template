@@ -2,14 +2,14 @@
 
 You can add figure from code block or from image files:
 
-```{r figcaptions, include = FALSE, echo = FALSE}
+```{r figcaptions, echo = FALSE}
 
 likProfMCap <- "Negative log likelihood (NLL) profile for operating model fits with natural mortaltiy fixed at values ranging from 0.1 to 1.0. The top panel shows the total NLL, while the middle and bottom panels show NLL components for indices and length compositions, respectively."
 
 rnormhist <- "histogram of 1000 draws from normal distribution"
 ```
 
-```{r rnorm, echo = FALSE, fig.cap = rnormhist, eval = TRUE, fig.width = 8, fig.asp = 1.2, out.width = "6in" }
+```{r rnorm, echo = FALSE, fig.cap =rnormhist, eval = TRUE, fig.width = 8, fig.asp = 1.2, out.width = "6in" }
 x <- rnorm(1000)
 hist(x)
 ```
