@@ -81,8 +81,8 @@ notationTable <- tibble::tribble(
 )
 
 
-csasdown::csas_table( notationTable  , escape = FALSE,
-                      booktabs = TRUE, font_size = 10,
+knitr::kable( notationTable  , escape = FALSE,
+                      booktabs = TRUE,
                       format = kable_format,
                       linesep = "\\addlinespace[5pt]",
                       caption = notationTableCap,

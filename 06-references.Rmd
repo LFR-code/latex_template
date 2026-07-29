@@ -4,4 +4,8 @@
 
 # REFERENCES {-}
 
-<div id="refs"></div>
+<!-- Under natbib (citation_package: natbib in index.Rmd), the bibliography
+is inserted by \bibliography{}/\bibliographystyle{} in the template itself
+via BibTeX, not by pandoc/citeproc -- no <div id="refs"></div> placeholder
+is needed (and including one produced a stray, unwrapped \bibitem that
+broke the LaTeX build: "Lonely \item--perhaps a missing list environment"). -->

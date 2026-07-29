@@ -1,5 +1,6 @@
 \documentclass[$if(fontsize)$$fontsize$,$endif$]{article}
-\usepackage[letterpaper, 
+\usepackage[T1]{fontenc}
+\usepackage[letterpaper,
             left=2.5cm,
             right=2.5cm,
             top=2.5cm, 
@@ -188,7 +189,7 @@ $endif$
 $if(title)$
 \begin{titlepage}
 
-\newgeometry{top=1in,bottom=2in,right=1.5in,left=1.5in,includefoot}
+\newgeometry{top=1in,bottom=2in,right=1.5in,left=1.5in,includefoot,footskip=1.5in}
 \thispagestyle{firststyle}
 
 \noindent

@@ -35,9 +35,10 @@ noindent: true #if true: all paragraph will have no indentation, otherwise there
 header: "Draft working paper --- Do not cite or circulate" # or "" to omit
 output:
   bookdown::pdf_document2:
-    keep_text: true
+    keep_tex: true
     fig_caption: true
     latex_engine: pdflatex
+    citation_package: natbib
     template: templates/lfrDraft.latex #choose the template
   bookdown::word_document2:
     reference_docx: templates/template.docx
@@ -153,7 +154,11 @@ Insert text here.
 
 # REFERENCES {-}
 
-<div id="refs"></div>
+<!-- Under natbib (citation_package: natbib in index.Rmd), the bibliography
+is inserted by \bibliography{}/\bibliographystyle{} in the template itself
+via BibTeX, not by pandoc/citeproc -- no <div id="refs"></div> placeholder
+is needed (and including one produced a stray, unwrapped \bibitem that
+broke the LaTeX build: "Lonely \item--perhaps a missing list environment"). -->
 
 <!--chapter:end:06-references.Rmd-->
 
@@ -240,8 +245,8 @@ notationTable <- tibble::tribble(
 )
 
 
-csasdown::csas_table( notationTable  , escape = FALSE,
-                      booktabs = TRUE, font_size = 10,
+knitr::kable( notationTable  , escape = FALSE,
+                      booktabs = TRUE,
                       format = kable_format,
                       linesep = "\\addlinespace[5pt]",
                       caption = notationTableCap,
@@ -346,7 +351,6 @@ knitr::include_graphics("figure/LikeProfileM.pdf")
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 ```
-
 <!-- Do not delete/edit the chunk above -->
 
 # Cool Appendix
